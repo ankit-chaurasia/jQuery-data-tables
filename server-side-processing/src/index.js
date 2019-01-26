@@ -1,7 +1,35 @@
-import message from './message';
-// import './style-css.css';
-import './style-scss.scss';
+import $ from 'jquery';
+import scroller from 'datatables.net-scroller';
+$.DataTable = scroller;
+import './style-css.css';
 
-const paragraph = document.createElement('p');
-paragraph.innerHTML = message;
-document.body.prepend(paragraph);
+$(document).ready(function() {
+  $(document).ready(function() {
+    $('#example').DataTable({
+      serverSide: true,
+      ordering: true,
+      searching: true,
+      ajax: function(data, callback, settings) {
+        var out = [];
+
+        for (var i = data.start, ien = data.start + data.length; i < ien; i++) {
+          out.push([i + '-1', i + '-2', i + '-3', i + '-4', i + '-5']);
+        }
+
+        setTimeout(function() {
+          callback({
+            draw: data.draw,
+            data: out,
+            recordsTotal: 5000000,
+            recordsFiltered: 5000000
+          });
+        }, 50);
+      },
+      scrollY: 400,
+      scroller: {
+        loadingIndicator: true
+      },
+      stateSave: true
+    });
+  });
+});
