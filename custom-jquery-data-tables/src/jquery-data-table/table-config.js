@@ -1,9 +1,12 @@
 export default {
+  ordering: true,
+  searching: true,
+  paging: true,
+  processing: true,
   serverSide: false,
-  ordering: false,
-  searching: false,
   ajax: null,
-  scrollY: 200,
+  scrollY: '50vh',
+  scrollCollapse: false,
   scroller: {
     loadingIndicator: true
   },

@@ -3,8 +3,6 @@ import dataTable from './jquery-data-table';
 const customTableConfig = {
   id: '#example',
   serverSide: true,
-  searching: true,
-  ordering: true,
   ajax: (data, callback, settings) => {
     let out = [];
     for (let i = data.start, ien = data.start + data.length; i < ien; i++) {
