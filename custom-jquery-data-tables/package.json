@@ -1,5 +1,5 @@
 {
-  "name": "server-side-processing",
+  "name": "custom-jquery-data-table",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.3.0",
@@ -30,7 +31,10 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "datatables.net": "^1.10.19",
+    "datatables.net-bs": "^1.10.19",
     "datatables.net-scroller": "^1.5.1",
+    "datatables.net-scroller-bs": "^1.5.1",
     "jquery": "^3.3.1"
   }
 }

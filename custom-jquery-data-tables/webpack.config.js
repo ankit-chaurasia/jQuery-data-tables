@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: 'js/bundle.js'
   },
   mode: 'development',
   plugins: [
@@ -18,7 +18,7 @@ module.exports = {
       inject: true,
       template: './public/index.html'
     }),
-    new ExtractTextPlugin('bundle.css')
+    new ExtractTextPlugin('stylesheets/bundle.css')
   ],
   module: {
     rules: [
@@ -36,5 +36,6 @@ module.exports = {
         })
       }
     ]
-  }
+  },
+  devtool: 'source-map'
 };
