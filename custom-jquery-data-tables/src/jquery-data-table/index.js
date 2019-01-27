@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import 'datatables.net';
 import 'datatables.net-bs';
-import 'datatables.net-scroller-bs';
+import 'datatables.net-scroller';
 import 'datatables.net-scroller-bs';
 import defaultTableConfig from './table-config';
 
