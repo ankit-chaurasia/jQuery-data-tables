@@ -1,4 +1,4 @@
-import dataTable from './jquery-data-table';
+import dataTable from '../modules/jquery-data-table';
 
 const customTableConfig = {
   id: '#example',

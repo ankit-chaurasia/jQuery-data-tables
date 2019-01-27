@@ -6,7 +6,7 @@ const SRC_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
   entry: {
-    app: SRC_DIR + '/index.js'
+    app: `${SRC_DIR}/js/index.js`
   },
   output: {
     path: BUILD_DIR,
@@ -16,7 +16,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      template: './public/index.html'
+      template: `${SRC_DIR}/index.html`
     }),
     new ExtractTextPlugin('stylesheets/bundle.css')
   ],
